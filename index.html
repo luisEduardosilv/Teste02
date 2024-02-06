@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Gerenciador de Equipamentos</title>
+</head>
+
+<body>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="container border p-2 g-2">
+
+          <h2 class="text-center">Estoque de Equipamentos</h2>
+          <form id="formulario" method="post" class="row p-2 g-2">
+            <div>
+              <label for="nome">Nome</label>
+              <input type="text" class="form-control" id="inputNome" placeholder="Mínimo de 6 caracteres" required />
+            </div>
+            <div>
+              <label for="preco">Preço</label>
+              <input type="number" step="0.01" class="form-control" id="inputPreco" required />
+            </div>
+            <div>
+              <label for="numeroSerie">Número de Série</label>
+              <input type="number" class="form-control" id="inputNumeroSerie"
+                placeholder="Insira o número de série do equipamento" required />
+            </div>
+            <div>
+              <label for="dataFabricacap">Data de fabricação</label>
+              <input type="date" class="form-control" id="inputDataFabricacao"
+                placeholder="Insira a Data de fabricação do Equipamento" required />
+            </div>
+            <div>
+              <label for="fabricante">Fabricante</label>
+              <input type="text" class="form-control" id="inputFabricante"
+                placeholder="Insira a fabricante do equipamento" required />
+            </div>
+            <button type="button" onclick="cadastrar()" class="btn btn-outline-primary">Cadastrar</button>
+          </form>
+        </div>
+        <div class="container">
+          <section id="tabela1">
+            <h3>Tabela de Informações</h3>
+            <table class="table" id="tabela">
+              <thead>
+                <tr>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Número de Série</th>
+                  <th scope="col">Fabricante</th>
+                  <th scope="col">Ações</th>
+                </tr>
+              </thead>
+            </table>
+          </section>
+          <button onclick="limpar()" class="btn btn-danger">Limpar Dados</button>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="container border p-2 g-2">
+          <h2 class="text-center">Controle de Chamados</h2>
+          <form id="formulario2" method="post" class="row p-2 g-2">
+            <div>
+              <label for="tituloChamado">Título do Chamado</label>
+              <input type="text" class="form-control" id="inputTituloChamado" required />
+            </div>
+            <div>
+              <label for="descricaoChamado">Descrição do Chamado</label>
+              <textarea class="form-control" id="inputDescricaoChamado" rows="3" required></textarea>
+            </div>
+            <div>
+              <label for="inputEquipamentoChamado">Equipamento</label>
+              <select class="form-control" id="inputEquipamentoChamado" required>
+              </select>
+            </div>
+            <div>
+              <label for="dataAberturaChamado">Data de Abertura</label>
+              <input type="date" class="form-control" id="inputDataAberturaChamado" required />
+            </div>
+            <button type="button" onclick="cadastrarChamado()" class="btn btn-outline-primary">Cadastrar</button>
+          </form>
+        </div>
+
+        <div class="container">
+          <section id="tabela02">
+            <h3>Tabela de Chamados</h3>
+            <table class="table" id="tabela2">
+              <thead>
+                <tr>
+                  <th scope="col">Título do Chamado</th>
+                  <th scope="col">Equipamento</th>
+                  <th scope="col">Data de Abertura</th>
+                  <th scope="col">Dias em Aberto</th>
+                  <th scope="col">Ações</th>
+                </tr>
+              </thead>
+            </table>
+          </section>
+          <button onclick="limpar2()" class="btn btn-danger">Limpar Dados</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+</body>
+</html>

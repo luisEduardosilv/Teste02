@@ -1,0 +1,21 @@
+h3{
+    text-align: center;
+    margin-top: 10px;
+}
+form{
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 1.5%;
+}
+
+#botaoCadastrar{
+    width: 500px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+table{
+    margin-top: 80px;
+   width: 20%;
+}
